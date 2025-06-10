@@ -11,19 +11,25 @@ COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 # Copiar el proyecto
 COPY . /var/www/html
 
-# Establecer el directorio de trabajo
+# Establecer directorio de trabajo
 WORKDIR /var/www/html
 
-# Crear carpetas necesarias con permisos correctos
-RUN mkdir -p bootstrap/cache storage \
-    && chmod -R 775 bootstrap/cache storage \
-    && chown -R www-data:www-data bootstrap/cache storage
+# Crear carpetas necesarias con permisos correctos para Laravel
+RUN mkdir -p \
+    storage/app \
+    storage/framework/cache \
+    storage/framework/sessions \
+    storage/framework/views \
+    storage/logs \
+    bootstrap/cache \
+    && chmod -R 775 storage bootstrap/cache \
+    && chown -R www-data:www-data storage bootstrap/cache
 
-# Instalar dependencias sin ejecutar Artisan aún
+# Instalar dependencias de Composer
 RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-interaction --prefer-dist --optimize-autoloader
 
 # Exponer el puerto 80
 EXPOSE 80
 
-# Comando para arrancar Apache
+# Comando por defecto
 CMD ["apache2-foreground"]
