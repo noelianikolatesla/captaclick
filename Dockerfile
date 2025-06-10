@@ -28,6 +28,8 @@ RUN mkdir -p \
 # Instalar dependencias de Composer
 RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-interaction --prefer-dist --optimize-autoloader
 
+RUN sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html/public|g' /etc/apache2/sites-available/000-default.conf
+
 # Exponer el puerto 80
 EXPOSE 80
 
