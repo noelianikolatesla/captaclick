@@ -14,10 +14,12 @@ COPY . /var/www/html
 # Establece directorio
 WORKDIR /var/www/html
 
-# Crea carpeta de caché necesaria para Laravel
-RUN mkdir -p bootstrap/cache && chmod -R 775 bootstrap/cache
+# Crea carpetas necesarias y da permisos
+RUN mkdir -p bootstrap/cache storage \
+    && chmod -R 775 bootstrap/cache storage \
+    && chown -R www-data:www-data bootstrap/cache storage
 
-# Instala dependencias sin ejecutar Artisan
+# Instala dependencias sin ejecutar artisan (todavía)
 RUN composer install --no-interaction --prefer-dist --optimize-autoloader
 
 # Expone puerto Apache
@@ -25,3 +27,4 @@ EXPOSE 80
 
 # Arranca Apache
 CMD ["apache2-foreground"]
+
