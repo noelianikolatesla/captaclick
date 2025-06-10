@@ -1,0 +1,31 @@
+# Laravel  
+/vendor  
+/node_modules  
+/public/storage  
+/storage/*.key  
+/storage/app/public  
+/storage/framework/*  
+/storage/logs/*  
+/bootstrap/cache/*.php  
+# Env  
+.env  
+.env.*.php  
+# IDEs  
+.idea/  
+.vscode/  
+*.sublime-project  
+*.sublime-workspace  
+# OS  
+.DS_Store  
+Thumbs.db  
+ehthumbs.db  
+*.log  
+# Git temp  
+*.swp  
+*~  
+*.bak  
+*.tmp  
+# Build  
+/public/hot  
+/public/build  
+vite.config.js 

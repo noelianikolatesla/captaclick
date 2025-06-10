@@ -1,0 +1,374 @@
+/*format titols i deixa valoracio*/
+#titulo-valoraciones,
+#deja-valoracion {
+	font-family: 'Orbitron', sans-serif;
+	color: #333;
+	margin-bottom: 15px;
+	text-align: center;
+	font-family: 'Audiowide', sans-serif;
+	font-size: 30px;
+	font-weight: 400;
+	/*tamany grosor*/
+	color: #FFFFFF;
+	text-align: center;
+	position: relative;
+	margin: 20px 0;
+	text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.valoracion {
+	margin-bottom: 15px;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	background-color: #fff;
+}
+
+.valoracion p {
+	margin: 8px 0;
+	font-family: 'Rajdhani', sans-serif;
+}
+
+.valoracion p strong {
+	color: #007BFF;
+}
+
+/*color i tamany del primer fill despres de l'element p*/
+.valoracion p:last-child {
+	font-size: 1.2em;
+	color: #FFA500;
+}
+
+#media-valoraciones {
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	color: #00bcd4;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 14px;
+	padding: 5px 10px;
+	border-radius: 5px;
+	background-color: transparent;
+}
+
+form {
+	margin: 10px auto;
+	border-width: 2px 0;
+	width: 710px;
+	text-align: center;
+	padding: 10px;
+	background: rgba(0, 0, 0, 0.2) bottom center;
+	border-radius: 5px 5px 5px 5px;
+}
+
+.alineado {
+	display: inline;
+}
+
+label {
+	margin: 15px 15px;
+	padding: 30px 30px;
+
+	font-family: 'Aguafina';
+	font-size: 1.5em;
+}
+
+input {
+	background-color: transparent;
+	border-width: 0 0 1px 0;
+	font-style: italic;
+	font-family: Times, "Times New Roman", serif;
+	font-size: 1.1em;
+	text-align: center;
+	width: 90%;
+	max-width: 77%;
+	margin-left: -14px;
+
+}
+
+select {
+	background-color: transparent;
+	border-width: 0 0 1px 0;
+	font-style: italic;
+	font-family: Times, "Times New Roman", serif;
+	font-size: 1.1em;
+	text-align: center;
+	width: 90%;
+	max-width: 77%;
+	/*necesari en negatiu per a que menge el marge esquerre*/
+	margin-left: -27px;
+
+}
+
+textarea {
+	color: #281780;
+	background-color: transparent;
+	border-width: 0 0 1px 0;
+	font-style: italic;
+	font-family: Times, "Times New Roman", serif;
+	font-size: 1.1em;
+	padding: 0px 5px;
+	width: 100%;
+	max-width: 78%;
+
+	margin: 0% 19%;
+	/*si el main ppal (estilos.css) son 72% /2 = 36% es un marge total, dividit entre dos marge esquerra y dreta 18% */
+
+}
+
+button {
+	cursor: pointer;
+	font-family: 'Aguafina';
+	font-size: 1.5em;
+	padding: 3px 25px;
+	border-radius: 10px;
+	margin: 0% 45%;
+	border: none;
+	background-color: #333;
+	background: -moz-radial-gradient(30% 120%, rgba(144, 144, 144, 1) 0%, rgba(72, 72, 72, 1) 50%);
+	background: -o-radial-gradient(30% 120%, rgba(144, 144, 144, 1) 0%, rgba(72, 72, 72, 1) 50%);
+	background: -webkit-radial-gradient(30% 120%, rgba(144, 144, 144, 1) 0%, rgba(72, 72, 72, 1) 50%);
+	background: radial-gradient(30% 120%, rgba(144, 144, 144, 1) 0%, rgba(72, 72, 72, 1) 50%);
+	color: #fff;
+	font-style: italic;
+	font-size: 2em;
+	opacity: 0.8;
+	transition: opacity .25s linear;
+	-webkit-transition: opacity .25s linear;
+	-moz-transition: opacity .25s linear;
+}
+
+button:hover {
+	opacity: 1;
+}
+
+/* eliminar los puntos de la lista */
+form ul {
+	list-style-type: none;
+}
+
+form ul li {
+	margin-bottom: 3px;
+}
+
+form p {
+	text-align: center;
+}
+
+
+
+/* configuracion valido e invalido */
+:invalid {
+	box-shadow: none;
+}
+
+/*apa<recer asterisco y pintado en rojo los campos que sean requeridos*/
+input:required:invalid {
+	box-shadow: 0 0 10px red;
+	background: url('../imgs/required.png') right no-repeat;
+
+}
+
+/* aplicar estilos de campo valido o invalido unicamente cuando elemento tenga el foco */
+input:required:invalid:focus {
+	background: url('../imgs/invalid.png') right no-repeat;
+}
+
+/*cuando tenga el foco y sea valido*/
+input:required:valid:focus {
+	background: url('../imgs/valid.png') right no-repeat;
+}
+
+/*fonts*/
+@font-face {
+
+	font-family: 'LeagueGothic';
+	src: url('../fonts/League_Gothic-webfont.eot');
+	src: url('../fonts/League_Gothic-webfont.eot?') format('eot'),
+		url('../fonts/League_Gothic-webfont.woff') format('woff'),
+		url('../fonts/League_Gothic-webfont.ttf') format('truetype'),
+		url('../fonts/League_Gothic-webfont.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Aguafina';
+	src: url('../fonts/AguafinaScript-Regular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/* Media querys responsiva */
+@media all and (max-width: 1024px) {
+	.valoracion {
+		width: 100%;
+		margin: 5px auto;
+		max-width: 95%;
+	}
+
+	.valoracion p {
+		width: 100%;
+		margin: 0 auto;
+
+	}
+
+
+	.valoracion p:last-child {
+		margin-bottom: 0;
+
+	}
+
+	#media-valoraciones {
+		width: 30%;
+		margin: 0 auto;
+		padding: 0px;
+		font-size: 0.8em;
+	}
+
+
+	/*-----formulario-----*/
+	form {
+		width: 100%;
+		max-width: 95%;
+	}
+
+}
+
+@media all and (max-width: 768px) {
+
+	#valoraciones h2,
+	h3 {
+		font-size: 1.5em;
+	}
+
+	.valoracion {
+		width: 100%;
+		margin: 0 auto;
+		max-width: 91%;
+	}
+
+	.valoracion p {
+		width: 100%;
+		margin: 0 auto;
+
+	}
+
+
+	.valoracion p:last-child {
+		margin-bottom: 0;
+
+	}
+
+	#media-valoraciones {
+		width: 25%;
+		margin: 0 auto !important;
+		padding: 0px !important;
+		font-size: 0.6em;
+		background: transparent;
+
+
+	}
+
+	/*formulario*/
+	form {
+		width: 100%;
+		max-width: 92%;
+	}
+
+	input,
+	select {
+		max-width: 50%;
+		font-size: 1em;
+		padding: 3px;
+		display: inline-block;
+	}
+
+	form h1 {
+		font-size: 2em;
+	}
+
+	label {
+		font-size: 1.5em;
+	}
+
+}
+
+/* pantalles mobils */
+@media all and (max-width: 480px) {
+
+	#valoraciones h2,
+	h3 {
+		width: 100%;
+		font-size: 1.5em;
+	}
+
+	.valoracion {
+
+		width: 100%;
+		margin: 0 auto;
+
+	}
+
+	.valoracion p {
+
+		width: 100%;
+		margin: 0 auto;
+
+	}
+
+	.valoracion p:last-child {
+
+		margin-bottom: 0;
+
+	}
+
+	#media-valoraciones {
+
+		width: 25%;
+		margin: 0 auto;
+		display: none;
+
+	}
+
+	form {
+		width: 100%;
+		padding: 5px;
+		border-width: 1px 0;
+	}
+
+	form h1 {
+		font-size: 1.5em;
+		padding-bottom: 5px;
+		text-align: center;
+	}
+
+	input,
+	select {
+		max-width: 50%;
+		font-size: 1em;
+		padding: 3px;
+		display: inline-block;
+	}
+
+	form ul li {
+		margin-bottom: 5px;
+	}
+
+	label {
+		font-size: 1em;
+	}
+
+	button {
+		padding: 5px;
+		font-size: 1.2em;
+	}
+
+	input:required:invalid {
+		background: none;
+
+	}
+
+
+}

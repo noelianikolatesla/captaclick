@@ -1,0 +1,56 @@
+main{
+    background-color: rgba(209, 219, 221, 0.928);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(238, 235, 235, 0.1);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+main p{
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1em;
+    color: #333;
+    text-align: justify;
+    line-height: 1.6;
+    margin: 10px 20px;
+
+}
+
+.sobre-nosotros h3 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2em;
+    color: #019cb1;
+    text-align: center;
+    margin-top: 20px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 5);
+}
+
+.sobre-nosotros p {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.1em;
+    color: #333;
+    text-align: justify;
+    line-height: 1.6;
+    margin: 10px 20px;
+}
+
+.sobre-nosotros ul {
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+}
+
+.sobre-nosotros ul li {
+    font-size: 1.2em;
+    color: #333;
+    margin: 10px 0;
+}
+
+/*antes de ul li posar check (iconos buscats en internet)*/
+.sobre-nosotros ul li::before {
+    content: '✔️';
+    margin-right: 10px;
+    color: #00bcd4;
+}
+
+

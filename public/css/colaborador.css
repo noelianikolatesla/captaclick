@@ -1,0 +1,67 @@
+/* format seccio colaboradors*/
+#colaboradores {
+    padding: 20px;
+    background-color: rgba(85, 85, 85, 0.5); /* 0.5 trasparencia */
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#colaboradores h2 {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* estil de cada colaborador */
+.colaborador {
+    width: 96%;
+    margin-bottom: 20px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.colaborador img.logo {
+    float: left;
+    width: 100px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    margin-right: 15px; /*espai entre logo i text */
+}
+
+.colaborador h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin: 0 0 10px;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.colaborador p {
+    font-size: 1em;
+    color: #555;
+    text-align: justify;
+}
+
+/* media querys responsiva */
+@media all and (max-width: 768px) {
+    .colaborador {
+        text-align: center;
+    }
+
+    .colaborador img.logo {
+        float: none;
+        display: block;
+        margin: 0 auto ;
+    }
+
+}

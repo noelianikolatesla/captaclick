@@ -1,0 +1,684 @@
+/* general */
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+/* configuracio general del body */
+body {
+    background: linear-gradient(200deg, #002d35, #117782, #0097a7,#117782, #002d35);
+    font-family: Arial, sans-serif;
+    padding: 10px 0;
+}
+
+/* div page */
+.page {
+    max-width: 1024px;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+/* capçalera */
+header {
+    background-image: url('../imgs/header.png');
+    background-position: center;
+    padding: 15px 0;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+/* canvas */
+#canvas {
+    margin: 0px 5px;
+    margin-top: -10px;
+    width: 40%;
+    display: inline;
+    position: absolute;
+}
+
+/* format nom empresa*/
+#nombreEmpresa {
+    font-family: 'Orbitron', sans-serif; /*nova lletra en @fonts baix*/
+    font-size: 3em;
+    color: #00bcd4;
+    text-shadow: 0 0 8px #00bcd4, 0 0 16px #00bcd4, 0 0 24px #0097a7;
+    width: 33.3%; /*header en 3 parts, 1/3*/
+    display: inline;
+    margin: 50% 5% 5% 38.5%;
+}
+
+/*format eslogan */
+#eslogan {
+    font-size: 1.5em;
+    color: #00bcd4;
+    font-family: 'Aguafina'; /*nova lletra*/
+    letter-spacing: 3px;/*espai entre lletres*/
+    font-weight: 1; /*grosor mes fina*/
+    width: 33.3%;
+    display: inline;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+/* ajustar main */
+main {
+    width: 72%;
+    float: left;
+    padding: 10px 0px 0px 0px;
+    border-radius: 10px;
+}
+
+mark {
+    background-color: lightblue; /*fondo*/
+    color: blue; 
+    border: 2px solid blue;
+    border-radius: 5px; /* Bordes redondejats */
+    padding: 2px 2px;
+    }
+
+/*--------------nav-----------------*/
+nav {
+    width: 100%;
+    background: rgb(172, 228, 208);
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    position: relative;
+    margin: 0 5px;
+    text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #444;
+    padding: 10px 15px;
+    display: block;
+    text-align: center;
+    font-size: 1.1em;
+    font-family: 'Rajdhani', sans-serif; 
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #ccc;
+    color: rgb(25, 16, 84); 
+    border-radius: 10px;
+    font-family: 1.5em;
+    font-weight: bold;
+}
+
+/*--------- subilsta -------------*/
+nav ul ul {
+    display: none; /*oculta*/
+    position: absolute;
+    background: #fff;
+    border: 1px solid rgb(25, 16, 84);
+    border-radius: 10px;
+    padding: 0;
+    list-style: none;
+    z-index: 1; /*queda damunt de tot*/
+    text-align: center;
+}
+
+nav ul li:hover>ul {
+    display: block;
+    text-align: center;
+}
+
+nav ul ul li {
+    width: 110px; /*ample sublistes */
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+   
+}
+
+nav ul ul li a {
+    padding: 10px;
+    text-align: center;
+   
+}
+
+nav ul ul li a:hover {
+    background-color: #eee;
+    color: rgb(25, 16, 84); 
+    text-shadow: 3px 3px 3px #5656c6;
+}
+
+nav a {
+    display: none;
+}
+
+/* articles en tres columnes */
+article {
+    width: 27%; /* Tres columnes */
+    text-align: center;
+    line-height: 1.8em;
+    float: left;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px 1.33%;
+    padding: 10px;
+    background: #fff;
+    background-image: url('../imgs/article1.jpg') ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 520px;
+    
+}
+/*format elements de dins*/
+article img {
+    width: 100%;
+    height: 50%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+}
+
+article h3 {
+    font-family: 'Rajdhani', sans-serif; /*agregada per link en html*/
+    font-size: 1.4em;
+    color: #333;
+    margin: 10px 0;
+    color: darkblue; 
+    border: 2px solid darkblue; 
+    border-radius: 5px; 
+    padding: 2px 4px; 
+}
+
+article p {
+    font-size: 0.9em;
+    color: #555;
+    line-height: 1.5;
+    margin: 0 10px;
+    text-align: justify;
+}
+
+/* barra lateral*/
+aside {
+    /* background: rgb(158, 244, 250);*/
+    width: 20%;
+    float: left;
+    padding:10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estils subtituls */
+h2 {
+    font-family: 'Audiowide', sans-serif;
+    font-size: 35px;
+    color: #FFFFFF;
+    text-align: center;
+    position: relative;
+    margin: 20px 0;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8); /*sombra per a resaltar*/
+    
+}
+
+/* linea baix (despres) del titol */
+h2::after {
+    content: '';
+    display: block;
+    width: 80px;/*longitut linea */
+    height: 4px;/* grosor linea */
+    background: linear-gradient(90deg, #00BFFF, #1E90FF);/*degradat blau */
+    margin: 10px auto 0;/* centrat automatic y separat del text */
+    border-radius: 2px;
+}
+
+/*--------- format aside --------*/
+aside p {
+    font-size: 0.9em;
+    text-align: justify;
+}
+
+/* posicio contenedro asistent*/
+.assistant-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 15px 5px;
+}
+
+.assistant {
+    /*cursor: pointer; la image en un futur sera clickeable */
+    width: 100%;
+    height: 200px;
+    background-image: url('../imgs/assistente.webp');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    animation: zoom 4s forwards; /* animacio zoom 4s y para */
+}
+
+#parrafo-asistente {
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1em;
+}
+
+/*------ format goset ------*/
+.container-perrito {
+    margin-left: 10px;/*marge esquerre*/
+    width: 100%;/* tamany que ocupara */
+    height: 100%;
+    justify-content: center;
+
+}
+
+#perrito {
+    width: 100%;
+    cursor: pointer;
+    max-width: 450px;
+    height: auto;
+    border-radius: 10px;
+    animation: mover 2s infinite; /*animacio moviment*/
+   
+}
+
+#vamos {
+    cursor: pointer;
+}
+
+
+/* Peu */
+footer {
+    clear: both;
+    font-size: 0.8em;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    /*
+    border-top: 4px solid black;
+    background: linear-gradient(to top, #0170B9, #27AADE);
+    border-radius: 0 0 10px 10px;
+    */
+}
+
+/*-------animacio de zoom asistent-------*/
+@keyframes zoom {
+    0% {
+        transform: scale(0.5);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/*--------animacio goset---------*/
+@keyframes mover {
+    0% {
+        transform: rotate(10deg);
+    }
+
+    50% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(10deg);
+    }
+}
+
+/*-------fonts-----------*/
+@font-face {
+    font-family: 'Aguafina';
+    src: url('../fonts/AguafinaScript-Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Media querys per a fer la pagina responsiva */
+@media all and (max-width: 1020px) {
+    main{
+        width: 100%;
+    }
+
+    aside {
+        width: 100%;
+        float: left;
+        max-width: 95%;
+    }
+
+    article {
+        width: 44%; /* Dos columnes */
+    }
+    article img {
+        width: 90%;
+        height: 60%;
+    }
+
+    nav ul ul {
+        margin-top: 40px;
+        font-size: 0.8em;
+        margin-left: 2px;
+    }
+
+    nav ul li {
+        text-align: center;
+        font-size: 1em;
+        font-family: 'Rajdhani', sans-serif;  
+    }
+    nav ul ul li {
+        width: 70px;/*ample sublistes */
+        border-bottom: 1px solid #b6b3b3;
+     
+    }
+    
+    nav ul ul li a {
+        padding: 5px;
+        text-align: center;
+    }
+    nav ul ul li a:hover {
+        color: rgb(25, 16, 84); 
+        text-shadow: 3px 3px 3px #5b5b91;
+        background-color: white;
+        font-weight: bold;
+        text-align: center; 
+    }
+
+    #canvas {
+        width: 100%;
+        height: 100%;
+        max-width: 40%;
+        max-height: 73%;
+    }
+
+    #nombreEmpresa {
+        font-size: 1.99em;
+    }
+
+    #eslogan {
+        font-size: 1.3em;
+    }
+    
+    h2 {
+        font-size: 1.99em;
+    }
+    
+    .assistant {
+        width: 100%;
+        max-width: 90%;
+        height: 350px;
+        background-size: 60%;
+        margin: 5px auto;
+    }
+    #perrito{
+        max-width: 380px;
+    }
+
+
+}
+
+/* Media querys per a partir 800px dos columnes */
+@media all and (max-width: 800px) {
+    main{
+        width: 100%;
+    }
+
+    aside {
+        width: 100%;
+        float: left;
+        max-width: 95%;
+    }
+
+    article {
+        width: 44%; /* Dos columnes */
+    }
+    article img {
+        width: 90%;
+        height: 60%;    
+    }
+ 
+    nav ul ul {
+        margin-top: 40px;   
+    }
+
+    nav ul li {
+        display: inline-flex;
+        font-size: 0.83em;
+    }
+    nav ul ul li {
+        width: 70px; /*ample sublistes */
+        border-bottom: 1px solid #b6b3b3;
+    }
+    
+    nav ul ul li a {
+        padding: 5px;
+        text-align: center;
+    }
+    nav ul ul li a:hover {
+        color: rgb(25, 16, 84); 
+        text-shadow: 3px 3px 3px #5b5b91;
+        background-color: white;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #canvas {
+        width: 100%;
+        height: 100%;
+        max-width: 40%;
+        max-height: 53%;
+    }
+
+    #nombreEmpresa {
+        font-size: 1.7em;
+    }
+
+    #eslogan {
+        font-size: 1em;
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    h2 {
+        font-size: 1.7em;
+    }
+
+    .assistant {
+        width: 100%;
+        max-width: 90%;
+        height: 350px;
+        margin: 10px auto;
+    }
+    .container-perrito{
+        width: 100%;
+        max-width: 50%;
+        height: 100%;
+        margin: 0px auto;
+    }
+    #perrito{
+        width: 100%;
+        max-width: 350px;
+        margin: 0px auto;
+    }
+
+}
+
+
+/* ---- per a pantalles mes xicotetes, menu unic sino no cap en linea tot---- */
+@media all and (max-width: 695px) {
+    main{
+        width: 100%;
+    }
+
+    aside {
+        width: 100%;
+        float: left;
+        max-width: 95%;
+    }
+
+    article {
+        width: 43%;
+    }
+    article img {
+        width: 90%;
+        height: 60%;
+    }
+    
+    nav ul {
+        display: none;
+    }
+
+    nav>a {
+        display: block !important;
+        padding: 10px 15px;
+        text-align: center;
+        color: #fff;
+        background-color: #6cb4ce;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    nav ul.desplegado {
+        display: block !important;
+        list-style: none !important;
+    }
+
+    nav ul.desplegado li {
+        display: block !important;
+        text-align: center !important;
+    }
+
+    nav ul.desplegado li a {
+        display: block !important;
+        border-bottom: 1px solid #ccc !important;
+      
+    }
+    nav ul ul {
+        margin-top: -35px !important;
+        justify-content: right;
+        width: 95px;
+        margin-left: 65%;
+    }
+
+    #nombreEmpresa {
+        font-size: 1.6em;
+    }
+
+    #eslogan {
+        font-size: 1em;
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+    .assistant {
+        width: 100%;
+        max-width: 90%;
+        height: 350px;
+        margin: 10px auto;
+
+    }
+    #perrito{
+        max-width: 380px;
+    }
+}
+
+
+
+/* ---- per a mobils--- */
+@media all and (max-width: 500px) {
+    main{
+        width: 100%;
+    }
+
+    aside {
+        width: 100%;
+        float: left;
+        max-width: 95%;
+    }
+
+    article {
+        width: 100%;
+        max-width: 91%;
+        
+    }
+    article img {
+        width: 90%;
+        height: 60%;
+    }
+    
+    nav ul {
+        display: none;
+    }
+
+    nav>a {
+        display: block !important;
+        padding: 10px 15px;
+        text-align: center;
+        color: #fff;
+        background-color: #6cb4ce;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    nav ul.desplegado {
+        display: block !important;
+        list-style: none !important;
+    }
+
+    nav ul.desplegado li {
+        display: block !important;
+        text-align: center !important;
+    }
+
+    nav ul.desplegado li a {
+        display: block !important;
+        border-bottom: 1px solid #ccc !important;
+      
+    }
+    nav ul ul {
+        margin-top: -35px !important;
+        justify-content: right;
+        width: 95px;
+        margin-left: 65%;
+    }
+    #canvas {
+        width: 100%;
+        height: 100%;
+        max-width: 39%;
+        max-height: 50%;
+    }
+
+    #nombreEmpresa {
+        font-size: 1.6em;
+    }
+
+    #eslogan {
+        font-size: 1em;
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+    h2 {
+        font-size: 1.6em;
+    }
+    .assistant {
+        width: 100%;
+        max-width: 90%;
+        height: 350px;
+        margin: 10px auto;
+    }
+    #perrito{
+        max-width: 380px;
+    }
+}

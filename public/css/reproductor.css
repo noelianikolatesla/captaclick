@@ -1,0 +1,138 @@
+#reproductor {
+    width: 1000px;
+    justify-content: center;
+    background-image: url('../imgs/header.png');
+    position: relative;
+	border-radius: 5px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+
+
+}
+
+#barra {
+    width: 995px;
+    height: 16px;
+    margin: 0px auto;
+    padding: 1px;
+    background-color: #EEEEEE;
+    border: 1px solid #CCCCCC;
+	border-radius: 5px;
+    position: relative;
+	
+}
+
+#progreso {
+    width: 0;
+    height: 12px;
+    background-color: rgba(0, 0, 150, 0.2);
+    position: absolute;
+	border-radius: 5px;
+}
+
+
+main nav {
+	width: 1000px;
+    background-color: rgb(255, 255, 255);
+    background: none;
+	display: flex;
+
+}
+
+
+input[type="button"] {
+    width: 150px;
+    margin: 10px;
+    padding: 0.4em;
+    color: white;
+    background: linear-gradient(#5a546f, #2b0c52);
+    border-radius: 5px;
+    display: inline;
+	float: left;
+
+}
+
+input[type="button"]:hover {
+    background: linear-gradient(#27715f, #02c045);
+}
+
+label {
+    margin: 10px;
+    color: black;
+	font-size: 0.7em;
+
+}
+#volumen{
+    width: 180px;
+    color: aqua;
+    background-color: #2b0c52;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+    padding: 5px 5px;
+}
+
+/*media querys responsiva*/
+@media all and (max-width: 1024px) {
+    main nav {
+        width: 100%; 
+        text-align: center; 
+      
+    }
+    #reproductor{
+        width: 100%;
+
+    }
+    #barra{
+        width: 100%;
+    }
+    #progreso{
+        width: 0;
+    }
+    #medio{
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 800px) {
+    main nav {
+        width: 100%; 
+        text-align: center; 
+    
+    }
+    #reproductor{
+        width: 100%;
+
+    }
+    #barra{
+        width: 100%;
+    }
+    #progreso{
+        width: 0;
+    }
+    #medio{
+        width: 100%;
+    }
+}
+
+@media all and (max-width: 500px) {
+    main nav {
+        width: 100%; 
+        text-align: center;
+     
+    }
+    #reproductor{
+        width: 100%;
+
+    }
+    #barra{
+        width: 100%;
+    }
+    #progreso{
+        width: 0;
+    }
+    #medio{
+        width: 100%;
+    }
+}
