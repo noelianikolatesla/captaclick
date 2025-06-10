@@ -1,30 +1,29 @@
 FROM php:8.2-apache
 
-# Instala extensiones necesarias
+# Instalar extensiones necesarias
 RUN apt-get update && apt-get install -y \
     git zip unzip libzip-dev libpng-dev libonig-dev libxml2-dev curl \
     && docker-php-ext-install pdo_mysql mbstring zip
 
-# Instala Composer
+# Instalar Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-# Copia todo el proyecto
+# Copiar el proyecto
 COPY . /var/www/html
 
-# Establece directorio
+# Establecer el directorio de trabajo
 WORKDIR /var/www/html
 
-# Crea carpetas necesarias y da permisos
+# Crear carpetas necesarias con permisos correctos
 RUN mkdir -p bootstrap/cache storage \
     && chmod -R 775 bootstrap/cache storage \
     && chown -R www-data:www-data bootstrap/cache storage
 
-# Instala dependencias sin ejecutar artisan (todavía)
-RUN composer install --no-interaction --prefer-dist --optimize-autoloader
+# Instalar dependencias sin ejecutar Artisan aún
+RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-interaction --prefer-dist --optimize-autoloader
 
-# Expone puerto Apache
+# Exponer el puerto 80
 EXPOSE 80
 
-# Arranca Apache
+# Comando para arrancar Apache
 CMD ["apache2-foreground"]
-
