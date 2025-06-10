@@ -14,6 +14,9 @@ COPY . /var/www/html
 # Establecer directorio de trabajo
 WORKDIR /var/www/html
 
+# Cambiar el DocumentRoot de Apache a /var/www/html/public
+RUN sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html/public|g' /etc/apache2/sites-available/000-default.conf
+
 # Crear carpetas necesarias con permisos correctos para Laravel
 RUN mkdir -p \
     storage/app \
@@ -27,8 +30,6 @@ RUN mkdir -p \
 
 # Instalar dependencias de Composer
 RUN COMPOSER_ALLOW_SUPERUSER=1 composer install --no-interaction --prefer-dist --optimize-autoloader
-
-RUN sed -i 's|DocumentRoot /var/www/html|DocumentRoot /var/www/html/public|g' /etc/apache2/sites-available/000-default.conf
 
 # Exponer el puerto 80
 EXPOSE 80
