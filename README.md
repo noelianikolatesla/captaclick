@@ -1,7 +1,7 @@
 # 🏠 Proyecto CaptaClick - Gestión Inmobiliaria
 
 **CaptaClick** es una aplicación web desarrollada en **Laravel Jetstream** que permite la gestión integral de inmuebles, clientes y visitas dentro de una plataforma moderna, segura y eficiente.  
-El sistema está diseñado para facilitar el trabajo de agentes inmobiliarios y administradores, centralizando toda la información en un solo panel.
+El sistema incluye un **asistente virtual con voz**, implementado con la API de **SpeechSynthesis**, que guía al usuario por la interfaz de manera accesible e interactiva.  
 
 ---
 
@@ -11,7 +11,8 @@ Ofrecer una herramienta **profesional, escalable y automatizada** que permita:
 - Administrar **clientes y usuarios**, con distintos roles (admin / usuario).  
 - Controlar **visitas a inmuebles**, generando PDFs e informes automáticos.  
 - Integrar **autenticación y gestión de usuarios** mediante **Laravel Jetstream** y **Sanctum**.  
-- Optimizar el flujo de trabajo mediante **notificaciones** y almacenamiento en **Firebase**.
+- Optimizar la interacción del usuario con un **asistente virtual por voz (SpeechSynthesis)**.  
+- Centralizar imágenes y documentos en **Firebase** para un acceso ágil y seguro. 
 
 ---
 
@@ -26,6 +27,7 @@ Ofrecer una herramienta **profesional, escalable y automatizada** que permita:
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
 ![Nginx](https://img.shields.io/badge/Nginx-009639?style=for-the-badge&logo=nginx&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![SpeechSynthesis API](https://img.shields.io/badge/Web_Speech_API-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white)
 
 ---
 
@@ -36,15 +38,16 @@ Incluye:
 - **Blade y Livewire** para las vistas interactivas.  
 - **Middlewares personalizados** para proteger rutas y roles.  
 - **Storage y FileSystem** para almacenar imágenes y documentos.  
-- **DomPDF** para la generación de informes en PDF.  
+- **DomPDF** para la generación de informes en PDF.
+- **SpeechSynthesis API** para el asistente de voz que guía al usuario.
 ---
 
 ## ⚙️ Funcionalidades principales
 - 👤 Registro e inicio de sesión con autenticación por roles.  
-- 👤 Registro e inicio de sesión con autenticación por roles.  
 - 🏘️ Gestión de inmuebles: alta, edición, filtrado y eliminación.  
-- ⭐ Sistema de **favoritos para clientes** totalmente funcional.  
-- 📅 Control de visitas y generación de PDFs.  
+- ⭐ Sistema de **favoritos para clientes** completamente funcional.  
+- 📅 Control de visitas y generación de informes en PDF.  
+- 💬 **Asistente virtual con voz** (SpeechSynthesis) que explica la interfaz y mejora la accesibilidad.  
 - 📨 Envío de notificaciones automáticas.  
 - 💾 Subida de imágenes y almacenamiento en Firebase.  
 - 🔒 Acceso protegido mediante **Jetstream** y **Sanctum**.  
@@ -55,10 +58,11 @@ Incluye:
 📌 Proyecto funcional y en mejora continua.  
 ✅ Funcionalidades implementadas:
 - [x] Sistema de favoritos para clientes.  
+- [x] Asistente virtual con voz (SpeechSynthesis API).  
 - [x] Gestión de inmuebles, clientes y visitas.  
-- [x] Generación de PDFs e informes de visitas.  
-- [x] Subida y almacenamiento de imágenes en Firebase.  
-- [x] Autenticación por roles con Jetstream y Sanctum.  
+- [x] Generación de PDFs e informes.  
+- [x] Subida de imágenes a Firebase.  
+- [x] Autenticación con Jetstream y Sanctum.  
 
 🧩 Próximas mejoras:
 - [ ] Panel estadístico con métricas de rendimiento.  
